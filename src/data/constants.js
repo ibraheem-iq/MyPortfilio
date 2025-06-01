@@ -48,7 +48,19 @@ export const HERO_CONTACT_INFO = [
 ];
 
 export const HERO_SOCIAL_LINKS = [
-  { icon: 'Github', color: 'text-gray-700 dark:text-gray-300' },
-  { icon: 'Linkedin', color: 'text-blue-600' },
-  { icon: 'Globe', color: 'text-green-600' }
+  { 
+    icon: 'Github', 
+    color: 'text-gray-700 dark:text-gray-300',
+    url: '#'
+  },
+  { 
+    icon: 'Linkedin', 
+    color: 'text-blue-600',
+    url: 'https://www.linkedin.com/in/ibrahim-anmar-637936215/'
+  },
+  { 
+    icon: 'Globe', 
+    color: 'text-green-600',
+    url: '#'
+  }
 ];

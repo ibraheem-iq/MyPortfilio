@@ -1,12 +1,12 @@
 // src/components/sections/Hero.jsx
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { HERO_CONTACT_INFO, HERO_SOCIAL_LINKS } from '../../data/constants';
+import { HERO_CONTACT_INFO, HERO_SOCIAL_LINKS,SOCIAL_LINKS } from '../../data/constants';
 import { useTypewriter } from '../../hooks/useTypewriter';
 import Section from '../common/Section';
 import IconComponent from '../common/IconComponent';
 import avatarImage from '../../assets/avatar.jpg';
-
+console.log(SOCIAL_LINKS)
 const Hero = ({ language, t }) => {
   const displayText = useTypewriter(t('hero.title'));
   
@@ -86,9 +86,9 @@ const Hero = ({ language, t }) => {
         </div>
 
         <div className="flex justify-center space-x-4 mb-12">
-          {HERO_SOCIAL_LINKS.map((social, index) => (
-            <a key={index} href="#" className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <IconComponent name={social.icon} size={24} className={social.color} />
+          {SOCIAL_LINKS.map((social, index) => (
+            <a key={index} href={social.url} className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <IconComponent name={social.icon} size={24} className="text-gray-700 dark:text-gray-300" />
             </a>
           ))}
         </div>
