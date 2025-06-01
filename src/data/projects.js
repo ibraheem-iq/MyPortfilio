@@ -42,7 +42,7 @@ export const PROJECTS_DATA = [
     ],
     github: "#",
     demo: "#",
-    featured: true,
+    featured: false,
     keyFeatures: [
       "User & Role Management with Zustand state management",
       "Dynamic Dashboards with real-time reporting",
@@ -77,7 +77,7 @@ export const PROJECTS_DATA = [
     ],
     github: "#",
     demo: "#",
-    featured: true,
+    featured: false,
     keyFeatures: [
       "Role-Based Access for different user types (Residence User, SubAdmin, Admin, Operations)",
       "Ticket Lifecycle Management with interactive timeline",

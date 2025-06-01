@@ -202,43 +202,6 @@ const ImageGallery = ({ images, language, projectTitle }) => {
             ))}
           </div>
         )}
-
-        {/* Image Info Panel */}
-        {currentImageInfo && (
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-            <div className="grid grid-cols-3 gap-4 text-center text-sm">
-              <div>
-                <p className="text-gray-500 dark:text-gray-400 mb-1">
-                  {language === 'en' ? 'Type' : 'النوع'}
-                </p>
-                <p className="font-medium text-gray-900 dark:text-white">
-                  {currentImageInfo.isWide 
-                    ? (language === 'en' ? 'Desktop' : 'سطح المكتب')
-                    : currentImageInfo.isMobile 
-                    ? (language === 'en' ? 'Mobile' : 'هاتف')
-                    : (language === 'en' ? 'Standard' : 'عادي')
-                  }
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-500 dark:text-gray-400 mb-1">
-                  {language === 'en' ? 'Ratio' : 'النسبة'}
-                </p>
-                <p className="font-medium text-gray-900 dark:text-white">
-                  {currentImageInfo.aspectRatio.toFixed(2)}:1
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-500 dark:text-gray-400 mb-1">
-                  {language === 'en' ? 'Position' : 'الموضع'}
-                </p>
-                <p className="font-medium text-gray-900 dark:text-white">
-                  {selectedImageIndex + 1} / {images.length}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Lightbox Modal */}
