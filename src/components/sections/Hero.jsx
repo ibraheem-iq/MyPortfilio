@@ -53,10 +53,10 @@ const Hero = ({ language, t }) => {
 
       <div className="text-center z-10 px-4">
         <div className="mb-8">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
+          <div className="w-72 h-72 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
             <img
-              width={128}
-              height={128}
+              width={228}
+              height={228}
               src={avatarImage}
               alt="Ibrahim Anmar"
               className="w-full h-full object-cover rounded-full"
