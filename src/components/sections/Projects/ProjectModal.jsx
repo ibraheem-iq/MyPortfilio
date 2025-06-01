@@ -1,8 +1,9 @@
 // src/components/sections/Projects/ProjectModal.jsx
-// Alternative implementation using a modal instead of full page
+// Updated modal with image gallery support
 
 import React, { useEffect } from 'react';
 import { X, Github, ExternalLink, Code, Star, Users } from 'lucide-react';
+import ImageGallery from './ImageGallery';
 
 const ProjectModal = ({ project, language, isOpen, onClose }) => {
   useEffect(() => {
@@ -27,24 +28,26 @@ const ProjectModal = ({ project, language, isOpen, onClose }) => {
       />
       
       {/* Modal Content */}
-      <div className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-5xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-gray-800 transition-colors"
+          className="absolute top-4 right-4 z-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2 hover:bg-white dark:hover:bg-gray-800 transition-colors"
         >
           <X size={20} className="text-gray-600 dark:text-gray-300" />
         </button>
 
-        {/* Project Image */}
+        {/* Project Images Gallery */}
         <div className="relative">
-          <img 
-            src={project.image} 
-            alt={project.title[language]}
-            className="w-full h-64 object-cover"
-          />
+          <div className="h-80">
+            <ImageGallery 
+              images={project.images || [{ url: project.image, caption: { en: project.title.en, ar: project.title.ar } }]}
+              language={language}
+              projectTitle={project.title[language]}
+            />
+          </div>
           {project.featured && (
-            <div className="absolute top-4 left-4">
+            <div className="absolute top-4 left-4 z-10">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                 <Star size={16} />
                 <span>{language === 'en' ? 'Featured' : 'مميز'}</span>

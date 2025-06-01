@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowLeft, Github, ExternalLink, Calendar, Users, Code, Star } from 'lucide-react';
 import Container from '../../common/Container';
 import Button from '../../common/Button';
+import ImageGallery from './ImageGallery';
 
 const ProjectDetail = ({ project, language, onBack }) => {
   if (!project) return null;
@@ -21,23 +22,21 @@ const ProjectDetail = ({ project, language, onBack }) => {
         </Button>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Project Image */}
+          {/* Project Images Gallery */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img 
-                src={project.image} 
-                alt={project.title[language]}
-                className="w-full h-80 lg:h-96 object-cover"
-              />
-              {project.featured && (
-                <div className="absolute top-4 right-4">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
-                    <Star size={16} />
-                    <span>{language === 'en' ? 'Featured' : 'مميز'}</span>
-                  </span>
-                </div>
-              )}
-            </div>
+            <ImageGallery 
+              images={project.images || [{ url: project.image, caption: { en: project.title.en, ar: project.title.ar } }]}
+              language={language}
+              projectTitle={project.title[language]}
+            />
+            {project.featured && (
+              <div className="absolute top-4 right-4 z-10">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                  <Star size={16} />
+                  <span>{language === 'en' ? 'Featured' : 'مميز'}</span>
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Project Info */}
