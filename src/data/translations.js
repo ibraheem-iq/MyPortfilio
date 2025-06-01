@@ -60,7 +60,21 @@ export const TRANSLATIONS = {
           all: "All Projects",
           mobile: "Mobile Apps", 
           web: "Web Apps"
-        }
+        },
+        backToProjects: "Back to Projects",
+      viewDetails: "View Details",
+      viewCode: "View Code",
+      liveDemo: "Live Demo",
+      keyFeatures: "Key Features",
+      technologiesUsed: "Technologies Used",
+      category: "Category",
+      projectOverview: "Project Overview",
+      technologies: "Technologies",
+      featured: "Featured",
+      webApplication: "Web Application",
+      mobileApplication: "Mobile Application",
+      yes: "Yes",
+      no: "No"
       },
       skills: {
         title: "Skills & Expertise",
@@ -151,7 +165,22 @@ export const TRANSLATIONS = {
           all: "كل المشاريع",
           mobile: "تطبيقات الهاتف",
           web: "تطبيقات الويب"
-        }
+        },
+        backToProjects: "العودة إلى المشاريع",
+      viewDetails: "عرض التفاصيل",
+      viewCode: "عرض الكود",
+      liveDemo: "معاينة مباشرة",
+      keyFeatures: "الميزات الرئيسية",
+      technologiesUsed: "التقنيات المستخدمة",
+      category: "الفئة",
+      projectOverview: "نظرة عامة على المشروع",
+      technologies: "التقنيات",
+      featured: "مميز",
+      webApplication: "تطبيق ويب",
+      mobileApplication: "تطبيق هاتف",
+      yes: "نعم",
+      no: "لا"
+
       },
       skills: {
         title: "المهارات والخبرات", 

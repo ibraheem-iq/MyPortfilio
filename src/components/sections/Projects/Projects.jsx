@@ -1,13 +1,18 @@
 // src/components/sections/Projects/Projects.jsx
+// Version with URL-based navigation using hash routing
+
 import React, { useState } from 'react';
 import { PROJECTS_DATA } from '../../../data/projects';
 import Section from '../../common/Section';
 import Container from '../../common/Container';
 import SectionHeader from '../../common/SectionHeader';
 import ProjectCard from './ProjectCard';
+import ProjectDetail from './ProjectDetail';
+import useProjectRouter from '../../../hooks/useProjectRouter';
 
 const Projects = ({ language, t }) => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const { selectedProject, showDetail, navigateToProject, navigateBack } = useProjectRouter();
   
   const categories = [
     { id: 'all', name: t('projects.categories.all') },
@@ -20,6 +25,17 @@ const Projects = ({ language, t }) => {
     : PROJECTS_DATA.filter(project => project.category === activeCategory);
 
   const featuredProjects = PROJECTS_DATA.filter(project => project.featured);
+
+  // If showing project detail, render only the detail component
+  if (showDetail && selectedProject) {
+    return (
+      <ProjectDetail 
+        project={selectedProject}
+        language={language}
+        onBack={navigateBack}
+      />
+    );
+  }
 
   return (
     <Section id="projects" className="bg-white dark:bg-gray-900">
@@ -36,7 +52,12 @@ const Projects = ({ language, t }) => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} language={language} />
+              <ProjectCard 
+                key={project.id} 
+                project={project} 
+                language={language}
+                onProjectClick={navigateToProject}
+              />
             ))}
           </div>
         </div>
@@ -63,7 +84,12 @@ const Projects = ({ language, t }) => {
         {/* All Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} language={language} />
+            <ProjectCard 
+              key={project.id} 
+              project={project} 
+              language={language}
+              onProjectClick={navigateToProject}
+            />
           ))}
         </div>
       </Container>
