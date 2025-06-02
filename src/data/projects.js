@@ -28,6 +28,7 @@ import passport_detail2 from "./../Epp/passport_detail2.png";
 import PassportType from "./../Epp/PassportType.png";
 import SplashScreen from "./../Epp/SplashScreen.png";
 import Videos from "./../Epp/Videos.png";
+import webviewpage from "./../Epp/web_view.png";
 
 import { Skeleton } from "antd";
 export const PROJECTS_DATA = [
@@ -272,6 +273,10 @@ export const PROJECTS_DATA = [
       {
         url: Videos,
         caption: { en: "News Section - Videos Tab", ar: "قسم الأخبار - تبويب الفيديوهات" }
+      },
+      {
+        url: webviewpage,
+        caption: { en: "WebView Page Apply now", ar: "الحجز الالكتروني" }
       },
       {
         url: Dark_mode_epp,
