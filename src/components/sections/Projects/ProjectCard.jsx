@@ -13,11 +13,14 @@ const ProjectCard = ({ project, language, onProjectClick }) => (
       </div>
     )}
     <div className="relative overflow-hidden" onClick={() => onProjectClick(project)}>
-      <img 
-        src={project.image} 
-        alt={project.title[language]}
-        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-      />
+      {/* Auto sizing - uses natural image dimensions */}
+      <div className="w-full h-auto">
+        <img 
+          src={project.image} 
+          alt={project.title[language]}
+          className="w-full h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
         <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
           <Eye size={24} className="text-white" />

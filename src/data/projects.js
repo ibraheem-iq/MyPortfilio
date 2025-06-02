@@ -8,6 +8,27 @@ import News_details from "./../Akhbary/News_details.png";
 import ar_search from "./../Akhbary/ar_search.png";
 import en_search from "./../Akhbary/en_search.png";
 import BookMarks from "./../Akhbary/BookMarks.png";
+
+//add the epp images
+import epp_image from "./../Epp/Epp_app.jpg";
+import homepageEpp from "./../Epp/HomePage.png";
+import Apply_now from "./../Epp/Apply_now.png";
+import Apply_now2 from "./../Epp/Apply_now2.png";
+import Blogs_detail from "./../Epp/Blogs_detail.png";
+import Blogs from "./../Epp/Blogs.png";
+import Dark_mode_epp from "./../Epp/Dark_mode.png";
+import Epp_history from "./../Epp/Epp_history.png";
+import News_epp from "./../Epp/News.png";
+import OfficeLocation from "./../Epp/OfficeLocation.png";
+import Office_location_dark from "./../Epp/Office_location_dark.png";
+import OfficePage from "./../Epp/OfficePage.png";
+import OfficePage2 from "./../Epp/OfficePage2.png";
+import passport_detail from "./../Epp/passport_detail.png";
+import passport_detail2 from "./../Epp/passport_detail2.png";
+import PassportType from "./../Epp/PassportType.png";
+import SplashScreen from "./../Epp/SplashScreen.png";
+import Videos from "./../Epp/Videos.png";
+
 import { Skeleton } from "antd";
 export const PROJECTS_DATA = [
   {
@@ -146,7 +167,6 @@ export const PROJECTS_DATA = [
       "Cross-platform compatibility"
     ]
   },
-  // Add more projects with similar image structure...
   {
     id: 4,
     title: { en: "Healthcare App", ar: "تطبيق الرعاية الصحية" },
@@ -175,6 +195,105 @@ export const PROJECTS_DATA = [
       "User-friendly interface",
       "Local data storage with SQLite",
       "Cross-platform mobile support"
+    ]
+  },
+  {
+    id: 5,
+    title: { en: "EPP - Electronic PassPort", ar: "الجواز الإلكتروني" },
+    category: 'mobile',
+    description: {
+      en: "Comprehensive mobile application for Iraq's Electronic PassPort Program featuring interactive maps, office directory, application system, and real-time updates for seamless passport services.",
+      ar: "تطبيق هاتف شامل لبرنامج الجواز الإلكتروني العراقي يتضمن خرائط تفاعلية ودليل المكاتب ونظام التقديم والتحديثات الفورية لخدمات جوازات سفر سلسة."
+    },
+    technologies: ['Flutter', 'MapLibre', 'WebView', 'YouTube API', 'Localization'],
+    packages: ['webview_flutter', 'webview_flutter_android', 'webview_flutter_wkwebview', 'youtube_player_flutter', 'flutter_map', 'latlong2', 'maplibre_gl', 'flutter_ar_json_extractor', 'localize_and_translate', 'http', 'location', 'flutter_polyline_points', 'baseflow_plugin_template', 'shimmer', 'flutter_localizations', 'shared_preferences', 'flutter_launcher_icons', 'logger', 'flutter_lints', 'flutter_native_splash'],
+    image: epp_image,
+    images: [
+      {
+        url: homepageEpp,
+        caption: { en: "Home Page", ar: "الصفحة الرئيسية" }
+      },
+      {
+        url: SplashScreen,
+        caption: { en: "Splash Screen", ar: "شاشة البداية" }
+      },
+      {
+        url: OfficeLocation,
+        caption: { en: "Interactive Map View", ar: "عرض الخريطة التفاعلية" }
+      },
+      {
+        url: Office_location_dark,
+        caption: { en: "Map Dark Mode", ar: "وضع الخريطة الليلي" }
+      },
+      {
+        url: OfficePage,
+        caption: { en: "Office Directory", ar: "دليل المكاتب" }
+      },
+      {
+        url: OfficePage2,
+        caption: { en: "Office Details", ar: "تفاصيل المكتب" }
+      },
+      {
+        url: Apply_now,
+        caption: { en: "Apply Now Process", ar: "عملية التقديم الآن" }
+      },
+      {
+        url: Apply_now2,
+        caption: { en: "Application Steps", ar: "خطوات التقديم" }
+      },
+      {
+        url: PassportType,
+        caption: { en: "Passport Types", ar: "أنواع الجوازات" }
+      },
+      {
+        url: passport_detail,
+        caption: { en: "Passport Details", ar: "تفاصيل الجواز" }
+      },
+      {
+        url: passport_detail2,
+        caption: { en: "Passport Information", ar: "معلومات الجواز" }
+      },
+      {
+        url: Blogs,
+        caption: { en: "News Section - Blogs Tab", ar: "قسم الأخبار - تبويب المدونات" }
+      },
+      {
+        url: Blogs_detail,
+        caption: { en: "Blog Details", ar: "تفاصيل المدونة" }
+      },
+      {
+        url: News_epp,
+        caption: { en: "News Section - News Tab", ar: "قسم الأخبار - تبويب الأخبار" }
+      },
+      {
+        url: Epp_history,
+        caption: { en: "News Section - History Tab", ar: "قسم الأخبار - تبويب التاريخ" }
+      },
+      {
+        url: Videos,
+        caption: { en: "News Section - Videos Tab", ar: "قسم الأخبار - تبويب الفيديوهات" }
+      },
+      {
+        url: Dark_mode_epp,
+        caption: { en: "Dark Mode", ar: "الوضع الليلي" }
+      }
+    ],
+    github: "#",
+    demo: "#",
+    featured: true,
+    keyFeatures: [
+      "Interactive Map with MapLibre™ rendering and custom office markers",
+      "One-tap Geolocation with 'you are here' positioning",
+      "Comprehensive Office Directory with detailed location information",
+      "Apply Now section with step-by-step application process and required documents",
+      "News Section with four tabs: Blogs, News, History of EPP, and Videos",
+      "Multi-language support (Arabic/English) with RTL layout",
+      "WebView integration for external content and forms",
+      "YouTube video player for instructional content",
+      "Real-time updates and official announcements",
+      "Dark/Light theme support with system preference detection",
+      "Offline data caching and shimmer loading animations",
+      "Document requirements and application rules guidance"
     ]
   }
 ];
