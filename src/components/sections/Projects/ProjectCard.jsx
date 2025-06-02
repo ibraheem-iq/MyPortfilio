@@ -52,20 +52,6 @@ const ProjectCard = ({ project, language, onProjectClick }) => (
           <Eye size={16} />
           <span>{language === 'en' ? 'View Details' : 'عرض التفاصيل'}</span>
         </button>
-        <a 
-          href={project.github}
-          onClick={(e) => e.stopPropagation()}
-          className="bg-gray-900 dark:bg-gray-700 text-white py-2 px-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors text-center text-sm font-medium"
-        >
-          <Github size={16} />
-        </a>
-        <a 
-          href={project.demo}
-          onClick={(e) => e.stopPropagation()}
-          className="bg-green-600 hover:bg-green-700 text-white py-2 px-3 rounded-lg transition-colors text-center text-sm font-medium"
-        >
-          <ExternalLink size={16} />
-        </a>
       </div>
     </div>
   </Card>

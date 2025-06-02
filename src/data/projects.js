@@ -18,7 +18,8 @@ export const PROJECTS_DATA = [
       en: "A comprehensive web application designed to streamline office operations and improve administrative efficiency with role-based access control and modern responsive UI.",
       ar: "تطبيق ويب شامل مصمم لتبسيط عمليات المكتب وتحسين الكفاءة الإدارية مع التحكم في الوصول القائم على الأدوار وواجهة حديثة متجاوبة."
     },
-    technologies: ['React', 'Ant Design', 'Zustand', 'RESTful API', 'ExcelJS', 'SignalR'],
+    technologies: ['React', 'Ant Design', 'Zustand','Axios', 'RESTful API', 'SignalR'],
+    packages: ['react-router-dom', 'antd', 'zustand', 'axios', 'exceljs', 'moment', 'lodash'],
     // Primary image for cards
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop",
     // Multiple images for gallery
@@ -59,7 +60,8 @@ export const PROJECTS_DATA = [
       en: "Web-based ticket management system to process electronic visa support requests with efficient workflows and role-based access control.",
       ar: "نظام إدارة التذاكر المبني على الويب لمعالجة طلبات دعم التأشيرة الإلكترونية مع سير عمل فعال والتحكم في الوصول القائم على الأدوار."
     },
-    technologies: ['React', 'Ant Design', 'Axios', 'SignalR', 'ExcelJS', 'html2pdf.js', 'Zustand'],
+    technologies: ['React', 'Ant Design', 'Axios', 'SignalR', 'Zustand'],
+    packages: ['react-router-dom', 'antd', 'axios', 'zustand', 'html2pdf.js', 'exceljs', 'moment'],
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop",
     images: [
       {
@@ -95,16 +97,17 @@ export const PROJECTS_DATA = [
       en: "Modern mobile news application built with Flutter that delivers real-time news from various sources using NewsAPI with sleek, responsive design.",
       ar: "تطبيق أخبار هاتف حديث مبني بـ Flutter يقدم أخبار فورية من مصادر مختلفة باستخدام NewsAPI مع تصميم أنيق ومتجاوب."
     },
-    technologies: ['Flutter', 'Dio', 'NewsAPI', 'Provider/Riverpod'],
+    technologies: ['Flutter', 'Dio', 'NewsAPI'],
+    packages: ['dio','intl','shimmer','go_router','shared_preferences','share_plus','connectivity_plus','flutter_svg','url_launcher','url_launcher_ios','url_launcher_android','cached_network_image','sqflite','path_provider'],
     image: akhbary_image,
     images: [
       {
-        url: skelton,
-        caption: { en: "Animation Loading", ar: "انميشن التحميل" }
-      },
-      {
         url: homepage,
         caption: { en: "News Feed Interface", ar: "واجهة تغذية الأخبار" }
+      },
+      {
+        url: skelton,
+        caption: { en: "Animation Loading", ar: "انميشن التحميل" }
       },
       {
         url: Dark_mode,
