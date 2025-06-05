@@ -124,7 +124,7 @@ const Header = ({ onToggleTheme, onToggleLanguage, onDownloadPDF, currentTheme, 
             {/* Action Buttons */}
             <div className="flex items-center space-x-2">
               {/* Theme Toggle */}
-              <button
+              {/* <button
                 onClick={onToggleTheme}
                 className="relative p-3 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 group overflow-hidden"
                 title={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} mode`}
@@ -135,12 +135,12 @@ const Header = ({ onToggleTheme, onToggleLanguage, onDownloadPDF, currentTheme, 
                   size={18}
                   className="relative z-10 group-hover:scale-110 transition-transform duration-300"
                 />
-              </button>
+              </button> */}
               
               {/* Language Toggle */}
               <button
                 onClick={onToggleLanguage}
-                className="relative px-4 py-3 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 group overflow-hidden font-semibold"
+                className="relative px-4 py-3 rounded-xl bg-gray-100/80 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 overflow-hidden font-semibold text-blue-50"
                 title={`Switch to ${currentLanguage === 'en' ? 'Arabic' : 'English'}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
